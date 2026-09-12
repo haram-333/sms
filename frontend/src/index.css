@@ -1,0 +1,44 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply bg-gray-50 text-gray-900 font-sans antialiased;
+  }
+}
+
+@layer components {
+  /* Consistent card styling */
+  .card {
+    @apply bg-white border border-gray-200 shadow-sm rounded-lg p-6;
+  }
+  
+  /* Consistent input styling */
+  .input-field {
+    @apply w-full border border-gray-300 rounded-md px-4 py-2 focus:outline-none focus:ring-2 focus:ring-gray-800 focus:border-transparent transition-all;
+  }
+
+  select.input-field {
+    @apply appearance-none bg-white pr-10;
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 20 20'%3e%3cpath stroke='%236b7280' stroke-linecap='round' stroke-linejoin='round' stroke-width='1.5' d='M6 8l4 4 4-4'/%3e%3c/svg%3e");
+    background-position: right 0.5rem center;
+    background-repeat: no-repeat;
+    background-size: 1.5em 1.5em;
+  }
+
+  /* Consistent button styling */
+  .btn-primary {
+    @apply bg-gray-900 hover:bg-black text-white font-medium py-2 px-4 rounded-md transition-all;
+  }
+  
+  .btn-secondary {
+    @apply bg-gray-200 hover:bg-gray-300 text-gray-900 font-medium py-2 px-4 rounded-md transition-all;
+  }
+
+  .btn-danger {
+    @apply bg-white border border-gray-300 hover:bg-gray-100 text-gray-900 font-medium py-2 px-4 rounded-md transition-all;
+  }
+}
